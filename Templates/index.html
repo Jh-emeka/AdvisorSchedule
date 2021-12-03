@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduling Application</title>
+</head>
+<body>
+<div class="Dashboard-container">
+
+    <h1>Scheduling-System</h1>
+
+    <button><a href="/newSchedule">New Schedule</a></button>
+    <button><a href="/updateSchedule">Update Schedule</a></button>
+    <button><a href="/deleteSchedule">Delete Schedule</a></button>
+    <br>
+    <form action="{{ url_for('get_schedule') }}" method="POST">
+
+        <label for="emp-name">First name:</label><br>
+        <input type="text" id="emp-name" name="Name">
+        <input type="submit" value="Get Schedule(s)">
+
+    </form>
+</div>
+</table><br><br><br>
+<table border="1" cellpadding="5" cellspacing="5">
+    <thead>
+    <td>Schedule Id</td>
+    <td>Advisor Name</td>
+    <td>Mon</td>
+    <td>Tue</td>
+    <td>Wed</td>
+    <td>Thur</td>
+    <td>Fri</td>
+    <td>Total Hours</td>
+    </thead>
+    {% for row in rows %}
+    <tr>
+        {% for data in row %}
+        <td>{{ data }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+<br><br>
+
+
+</body>
+</html>

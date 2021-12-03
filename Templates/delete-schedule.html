@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduling Application</title>
+</head>
+<body>
+<h1>Delete Schedule</h1>
+
+<form action="{{ url_for('delete_schedule') }}" method="POST">
+
+    <label for="Advisor">Schedule Id:</label><br>
+
+    <input type="text" id="Advisor" name="Schedule Id">
+
+    <input type="submit" value="Delete Schedule">
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduling Application</title>
+</head>
+<body>
+
+<h1>New Schedule</h1>
+
+<form action="{{ url_for('add_schedule') }}" method="POST">
+
+    <label for="Advisor">Advisor Name:</label><br>
+    <input type="text" id="Advisor" name="Advisor Name">
+
+    <br><label for="mon">Monday:</label><br>
+    <input type="text" id="mon" name="mon">
+
+    <br><label for="tues">Tuesday:</label><br>
+    <input type="text" id="tues" name="tues">
+
+    <br><label for="wed">Wednesday:</label><br>
+    <input type="text" id="wed" name="wed">
+
+    <br><label for="wed">Thursday:</label><br>
+    <input type="text" id="thurs" name="thurs">
+
+    <br><label for="fri">Friday:</label><br>
+    <input type="text" id="fri" name="fri">
+
+    <br><label for="hpw">Total Hours:</label><br>
+    <input type="text" id="hpw" name="Total Hours">
+
+
+    <br><br><input type="submit" value="Add Schedule">
+
+</form>
+
+</body>
+</html>
